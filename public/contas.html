@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contas cadastradas</title>
+    <link rel="stylesheet" href="contas.css">
+</head>
+
+<body>
+    <h1>Contas Cadastradas</h1>
+    <div id="main">
+        <ul class="contas-container" id="contas-list">
+        </ul>
+    </div>
+
+    <script>
+        //Método GET
+        fetch("http://localhost:3000/nomes")
+            .then(res => res.json())
+            .then(dados => {
+                var users = dados.map(use => "<li><div class='conta'><p> Nome: " + use.nome + "<br>Email: " + use.email + "<br>Username: " + use.username + "<br>Data de nascimento: " + use.datanascimento + "</p><a onclick=apagar('" + use.id + "')>Apagar</a><a onclick=alterar('" + use.id + "')>Alterar</a></div></li>").join('');
+                document.getElementById("contas-list").innerHTML = users;
+            })
+            .catch(erro => console.error(erro));
+
+        //Método DELETE
+        function apagar(id) {
+            console.log("Apagado" + id)
+            fetch("http://localhost:3000/nomes/" + id, {
+                "method": "DELETE"
+            }).
+                then(res => res.json()).
+                then(dados => console.log(dados))
+        }
+
+        //Método PUT
+        function alterar(id) {
+            var novoNome = prompt("Digite o novo nome:");
+            var novoEmail = prompt("Digite o novo email:");
+            var novoUsername = prompt("Digite o novo username:");
+            var novoData = prompt("Digite a data de nascimento:");
+
+            var newData = {
+                nome: novoNome,
+                email: novoEmail,
+                username: novoUsername,
+                datanascimento: novoData
+            };
+
+            fetch("http://localhost:3000/nomes/" + id, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(newData)
+            })
+                .then(res => res.json())
+                .then(dados => console.log(dados))
+                .catch(erro => console.error("Erro ao enviar requisição PUT:", erro));
+        }
+
+    </script>
+</body>
+
+</html>

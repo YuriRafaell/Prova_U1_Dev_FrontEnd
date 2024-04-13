@@ -1,0 +1,73 @@
+{
+  "nomes": [
+    {
+      "nome": "sthella",
+      "email": "sthella@gmail.com",
+      "username": "sthelaa",
+      "datanascimento": "19/12/2015",
+      "id": "53df"
+    },
+    {
+      "id": "3d94",
+      "nome": "Vivian",
+      "email": "vivian@gmail.com",
+      "username": "vivi",
+      "datanascimento": "24/05/2002"
+    },
+    {
+      "id": "85cd",
+      "nome": "rita",
+      "email": "rita@gmail.com",
+      "username": "ritinha",
+      "datanascimento": "25/10/2005"
+    },
+    {
+      "id": "af05",
+      "nome": "Yuri Rafael Santos de Araújo",
+      "email": "sd@gmail.com",
+      "username": "teste",
+      "dataNascimento": "2024-04-11"
+    },
+    {
+      "id": "db42",
+      "nome": "tata",
+      "email": "tata@gmail.com",
+      "username": "tatinha",
+      "datanascimento": "25/10/2005"
+    },
+    {
+      "id": "3a0b",
+      "nome": "YURI RAFAEL SANTOS DE ARAUJO",
+      "email": "steffanyj4203@gmail.com",
+      "username": "709.692.744-16",
+      "dataNascimento": "2026-04-21"
+    },
+    {
+      "id": "f865",
+      "nome": "teste",
+      "email": "teste@gmail.com",
+      "username": "TESTE",
+      "dataNascimento": "2025-09-15"
+    },
+    {
+      "nome": "benecio",
+      "email": "benecio@gmail.com",
+      "username": "bebe",
+      "id": "0eed"
+    },
+    {
+      "id": "1995",
+      "nome": "rose",
+      "email": "rose@gmail.com",
+      "username": "rose123",
+      "dataNascimento": "2002-03-31"
+    },
+    {
+      "id": "9e38",
+      "nome": "andresa",
+      "email": "andresa@gmail.com",
+      "username": "ellydy",
+      "dataNascimento": "2003-04-30"
+    }
+  ]
+}
